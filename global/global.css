@@ -1,8 +1,4 @@
-.sidenav {
-  width: 100%;
-  position: fixed;
-  padding: 0 20px 0 20px;
-}
+/* Defaults */
 
 .font1 {
   font-family: "Titan One", cursive;
@@ -12,23 +8,146 @@
   font-weight: 100;
 }
 
-.li {
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
-  font-size: 22px;
-}
-
 p,
 a {
   text-decoration: none;
 }
 
-.videocontainer {
-  padding: 0 0 0 19rem;
-  display: flex;
+.videos {
+  display: grid;
+  margin: auto;
+  width: 95%;
+  gap: 1rem;
 }
 
-.videos {
+iframe {
+  aspect-ratio: 16/9;
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+}
+
+.search {
   margin: auto;
+  width: 100%;
+}
+
+/* Desktop */
+
+@media (min-width: 992px) {
+  .sidenav {
+    width: 100%;
+    position: fixed;
+    padding: 0 20px 0 20px;
+    display: flex;
+  }
+  .bottomnav,
+  .topnav {
+    display: none;
+  }
+  .li {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+  }
+  .videocontainer {
+    padding: 2rem 0 2rem 300px;
+    display: grid;
+    gap: 2rem;
+  }
+
+  .input {
+    font-size: 20px;
+    width: 100%;
+    padding: 0 10px 0 10px;
+  }
+  .videos {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media (max-width: 1375px) {
+  .videos {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+/* Tablet-Mobile */
+
+@media (max-width: 992px) {
+  .sidenav {
+    display: none;
+  }
+
+  .bottomnav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    background-color: #1a1b1e;
+    min-height: 70px;
+  }
+  .topnav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0;
+    z-index: 999;
+    display: flex;
+    min-height: 80px;
+  }
+
+  .topnav nav {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    padding: 0;
+    width: 100%;
+  }
+
+  .bottomnav footer {
+    margin: auto;
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat(5, auto);
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .videocontainer {
+    display: grid;
+    padding: 7rem 20px 2rem 20px;
+    gap: 2rem;
+  }
+
+  .input {
+    font-size: 20px;
+    width: 100%;
+    padding: 0 40px 0 40px;
+  }
+
+  .left,
+  .middle,
+  .right,
+  .li {
+    padding: 0;
+    margin: auto;
+    display: flex;
+  }
+
+  .righticon {
+    margin: auto;
+  }
+
+  .videos {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media (max-width: 580px) {
+  .videos {
+    grid-template-columns: repeat(1, auto);
+  }
 }
