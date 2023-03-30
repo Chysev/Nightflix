@@ -4,6 +4,10 @@
   font-family: "Titan One", cursive;
 }
 
+.font2 {
+  font-family: "Heebo", sans-serif;
+}
+
 .nightflix {
   font-weight: 100;
 }
@@ -30,6 +34,11 @@ iframe {
 .search {
   margin: auto;
   width: 100%;
+}
+
+.avatar,
+.li {
+  cursor: pointer;
 }
 
 /* Desktop */
@@ -136,11 +145,6 @@ iframe {
     margin: auto;
     display: flex;
   }
-
-  .righticon {
-    margin: auto;
-  }
-
   .videos {
     grid-template-columns: repeat(2, auto);
   }
