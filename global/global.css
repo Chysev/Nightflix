@@ -46,10 +46,9 @@ iframe {
 @media (min-width: 992px) {
   .sidenav {
     width: 100%;
-    position: fixed;
     padding: 0 20px 0 20px;
-    display: flex;
   }
+
   .bottomnav,
   .topnav {
     display: none;
@@ -100,12 +99,9 @@ iframe {
   }
   .topnav {
     position: fixed;
-    top: 0;
     width: 100%;
     padding: 0;
     z-index: 999;
-    display: flex;
-    min-height: 80px;
   }
 
   .topnav nav {

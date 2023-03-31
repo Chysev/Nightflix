@@ -9,7 +9,7 @@ import { FaUserCircle } from "@react-icons/all-files/fa/FaUserCircle"
 import { HiOutlineHome } from "@react-icons/all-files/hi/HiOutlineHome";
 import { MdSubscriptions } from "@react-icons/all-files/md/MdSubscriptions"
 import { AiOutlineLogout } from "@react-icons/all-files/ai/AiOutlineLogout"
-import { ActionIcon, Box, Divider, Navbar, useMantineColorScheme, Text } from "@mantine/core"
+import { ActionIcon, Box, Divider, Navbar, useMantineColorScheme, Text, ScrollArea } from "@mantine/core"
 
 function NotAuth() {
 
@@ -40,7 +40,7 @@ function NotAuth() {
 
             </Navbar.Section>
 
-            <Navbar.Section className="sideicons" grow maw={200}>
+            <Navbar.Section className="sideicons" grow component={ScrollArea}>
                 <Link href="/">
                     <Box className="li" maw={98}>
                         <HiOutlineHome color={dark ? '#339af0' : '#339af0'} size={28} />
